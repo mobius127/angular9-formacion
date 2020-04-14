@@ -1,0 +1,24 @@
+$color-light-blue: #3d70b2;
+$color-blue: #10288a;
+$color-yellow: #feba00;
+$color-red: #f3102b;
+$color-dark-blue: #43425d;
+$color-golden: #c4b392;
+$color-white: #ffffff;
+$color-light-grey: #f6f8f9;
+$color-medium-grey: #eff3f8;
+$color-grey: #828282;
+$color-black: #000000;
+
+.rm-invalid-Field {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: $color-red;
+  font-style: italic;
+  font-weight: 500;
+
+  i {
+    color: $color-yellow;
+  }
+}

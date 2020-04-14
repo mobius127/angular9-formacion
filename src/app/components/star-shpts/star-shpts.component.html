@@ -1,0 +1,126 @@
+
+<form [formGroup]="starShipForm" (ngSubmit)="onSubmit()">
+  <div class="ui-g">
+    <div class="ui-g-3">
+      <label for="vesselName">Nombre  de nave: </label>
+    </div>
+    <div class="ui-g-9">
+      <input
+            id="vesselName"
+            name="vesselName"
+            type="text"
+            pInputText
+            formControlName="vesselName"
+            class="filterInput"
+            maxlength="100"
+          />
+      <div
+        class="rm-invalid-Field"
+        *ngIf="
+          !starShipForm.controls['vesselName'].valid &&
+          starShipForm.controls['vesselName'].dirty
+        ">
+        <i class="fas fa-exclamation-triangle"></i>&nbsp;
+        <span>Nombre no válido.</span>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g">
+    <div class="ui-g-3">
+      <label for="vesselClass">Clase: </label>
+    </div>
+    <div class="ui-g-9">
+      <input
+            id="vesselClass"
+            name="vesselClass"
+            type="text"
+            pInputText
+            formControlName="vesselClass"
+            class="filterInput"
+            maxlength="100"
+          />
+      <div
+        class="rm-invalid-Field"
+        *ngIf="
+          !starShipForm.controls['vesselClass'].valid &&
+          starShipForm.controls['vesselClass'].dirty
+        ">
+        <i class="fas fa-exclamation-triangle"></i>&nbsp;
+        <span>Clase no válida.</span>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g">
+    <div class="ui-g-3">
+      <label for="imageUrl">Url: </label>
+    </div>
+    <div class="ui-g-9">
+      <input
+            id="imageUrl"
+            name="imageUrl"
+            type="text"
+            pInputText
+            formControlName="imageUrl"
+            class="filterInput"
+            maxlength="100"
+          />
+      <div
+        class="rm-invalid-Field"
+        *ngIf="
+          !starShipForm.controls['imageUrl'].valid &&
+          starShipForm.controls['imageUrl'].dirty
+        ">
+        <i class="fas fa-exclamation-triangle"></i>&nbsp;
+        <span>Imagen no válida.</span>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g">
+    <div class="ui-g-3">
+      <label for="warpSpeed">Velocidad: </label>
+    </div>
+    <div class="ui-g-9">
+      <input
+            id="warpSpeed"
+            name="warpSpeed"
+            type="text"
+            pInputText
+            formControlName="warpSpeed"
+            class="filterInput"
+            maxlength="100"
+          />
+      <div
+        class="rm-invalid-Field"
+        *ngIf="
+          !starShipForm.controls['warpSpeed'].valid &&
+          starShipForm.controls['warpSpeed'].dirty
+        ">
+        <i class="fas fa-exclamation-triangle"></i>&nbsp;
+        <span>Velocidad no válida.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <!-- <button (click)="saveNewPersona()">Guardar</button>
+      <button (click)="clear()">Limpiar</button> -->
+      <p-button
+        type="button"
+        label="Limpiar"
+        icon="fas fa-redo-alt"
+        iconPos="left"
+        styleClass="ui-button-secondary"
+        (onClick)="onReset()"
+      ></p-button>
+      &nbsp;
+      <p-button
+        type="submit"
+        label="Guardar"
+        icon="fas fa-edit"
+        iconPos="left"
+        styleClass="ui-button-success"
+      ></p-button>
+    </div>
+  </div>
+</form>
