@@ -1,0 +1,29 @@
+<h1>Planetas de la Federación</h1>
+
+<div *ngIf="world">
+  <div class="ui-g">
+    <div class="ui-g-3">
+      <label for="fullName">Nombre de Planeta: </label>
+    </div>
+    <div class="ui-g-9">
+      <input id="fullName" type="text" [(ngModel)]="world.fullName" />
+    </div>
+  </div>
+  <div class="ui-g">
+    <div class="ui-g-3">
+      <label for="fullName">Descripción: </label>
+    </div>
+    <div class="ui-g-9">
+      <input id="fullName" type="text" [(ngModel)]="world.worldClass" />
+    </div>
+  </div>
+  <div class="ui-g">
+    <div class="ui-g-3">
+      <label for="fullName">Url: </label>
+    </div>
+    <div class="ui-g-9">
+      <input id="fullName" type="text" [(ngModel)]="world.imageUrl" />
+    </div>
+  </div>
+</div>
+

@@ -26,6 +26,7 @@ import { PersonnelComponent } from './components/personnel/personnel.component';
 import { MessageService } from 'primeng/api';
 import { HomeComponent } from './components/home/home.component';
 import { StarShptsComponent } from './components/star-shpts/star-shpts.component';
+import { FederationWorldsComponent, WorldFormComponent, WorldListComponent } from './components/federation-worlds';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -70,7 +71,10 @@ export function AppInitializerFactory(
     MyMenuComponent,
     PersonnelComponent,
     HomeComponent,
-    StarShptsComponent
+    StarShptsComponent,
+    FederationWorldsComponent,
+    WorldFormComponent,
+    WorldListComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,12 @@ export class MyMenuComponent implements OnInit {
       { label: 'Home', icon: 'pi pi-fw pi-plus', command: () => this.goToHome() },
       { label: 'Personal', icon: 'pi pi-fw pi-plus', command: () => this.goToPersonnel() },
       { label: 'Naves', icon: 'pi pi-fw pi-plus', command: () => this.goToStarShips() },
+      { label: 'Mundos', icon: 'pi pi-fw pi-plus', command: () => this.goToWorlds() }
     ];
+  }
+
+  goToWorlds(): void {
+    this.routerService.navigate(['/worlds']);
   }
 
   goToStarShips(): void {

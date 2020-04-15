@@ -124,3 +124,32 @@
     </div>
   </div>
 </form>
+
+
+<p-dataView [value]="starShipList">
+  <ng-template let-starShip pTemplate="listItem">
+    <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
+      <div class="ui-g-12 ui-md-3" style="text-align:center">
+        <img src="{{starShip.imageUrl}}" style="height: 8em;" />
+      </div>
+      <div class="ui-g-12 ui-md-8 car-details">
+        <div class="ui-g">
+          <div class="ui-g-3 ui-sm-6">Nombre:</div>
+          <div class="ui-g-9 ui-sm-6">
+            <b>{{ starShip.vesselName }}</b>
+          </div>
+
+          <div class="ui-g-3 ui-sm-6">Clase:</div>
+          <div class="ui-g-9 ui-sm-6">
+            <b>{{ starShip.vesselClass }}</b>
+          </div>
+
+          <div class="ui-g-3 ui-sm-6">Factor de Curvatura:</div>
+          <div class="ui-g-9 ui-sm-6">
+            <b>{{ starShip.warpSpeed }}</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-dataView>

@@ -1,0 +1,26 @@
+
+<p-dataView [value]="worldsList">
+  <ng-template let-world pTemplate="listItem">
+    <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
+      <div class="ui-g-12 ui-md-3" style="text-align:center">
+        <img src="{{world.imageUrl}}" style="height: 8em;" />
+      </div>
+      <div class="ui-g-12 ui-md-6 car-details">
+        <div class="ui-g">
+          <div class="ui-g-3 ui-sm-6">Nombre:</div>
+          <div class="ui-g-9 ui-sm-6">
+            <b>{{ world.fullName }}</b>
+          </div>
+
+          <div class="ui-g-3 ui-sm-6">Descripción:</div>
+          <div class="ui-g-9 ui-sm-6">
+            <b>{{ world.worldClass }}</b>
+          </div>
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-2">
+        <button (click)="clickWorld($event)" >Ver</button>
+      </div>
+    </div>
+  </ng-template>
+</p-dataView>

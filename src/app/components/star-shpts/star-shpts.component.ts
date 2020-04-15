@@ -20,6 +20,8 @@ export class StarShptsComponent implements OnInit {
 
   starShipForm: FormGroup;
 
+  starShipList: StarShip[];
+
   constructor(
     private formBuilder: FormBuilder,
     private service: StarShipService
@@ -27,6 +29,15 @@ export class StarShptsComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
+    this.starShip = {
+      id: 0,
+      vesselName: '',
+      vesselClass: '',
+      imageUrl: '',
+      warpSpeed: ''
+    };
+
+    this.service.getStarShipsFromServer().subscribe(response => this.starShipList = response);
   }
 
   onSubmit(): void {

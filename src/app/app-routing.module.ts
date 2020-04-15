@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PersonnelComponent } from './components/personnel/personnel.component';
 import { HomeComponent } from './components/home/home.component';
 import { StarShptsComponent } from './components/star-shpts/star-shpts.component';
+import { FederationWorldsComponent } from './components/federation-worlds';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
     path: 'star-ships',
     component: StarShptsComponent
   },
+  {
+    path: 'worlds',
+    component: FederationWorldsComponent
+  }
 ];
 
 @NgModule({
